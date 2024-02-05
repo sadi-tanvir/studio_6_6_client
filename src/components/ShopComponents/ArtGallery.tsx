@@ -42,7 +42,7 @@ const ArtGallery = () => {
                         GalleryData.map((item) => (
                             <div className='relative'>
                                 {item.isFeaturedArt &&
-                                    <p className='absolute top-2 left-3 px-4 py-2 rounded-xl bg-[#DED5ED] text-gray-600'>Featured Art</p>
+                                    <p className='absolute top-2 left-3 text-sm px-2 py-1 md:px-4 md:py-2 rounded-xl bg-[#DED5ED] text-gray-600'>Featured Art</p>
                                 }
                                 <Image
                                     key={item.id}
@@ -52,12 +52,12 @@ const ArtGallery = () => {
                                 />
                                 <div className='space-y-1 mt-3'>
                                     <p>Painting by {item.artist} {item.id}</p>
-                                    <h3 className='text-2xl font-bold text-gray-700'>
+                                    <h3 className='text-lg sm:text-xl md:text-2xl font-bold text-gray-700'>
                                         {item.description}
                                     </h3>
                                     <div>
-                                        <span className='text-2xl font-bold text-primary'>{item.price}৳</span>
-                                        <span className='ml-2'>270৳</span>
+                                        <span className='text-xl md:text-2xl font-bold text-primary'>{item.price}৳</span>
+                                        <span className='text-md md:text-lg ml-2 text-gray-600'>270৳</span>
                                     </div>
                                 </div>
                             </div>
