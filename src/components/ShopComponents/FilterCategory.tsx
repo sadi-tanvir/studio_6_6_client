@@ -41,10 +41,9 @@ const FilterCategory = () => {
                 <ul className='space-y-3'>
                     {
                         categories.map((category) => (
-                            <div className='flex items-center space-x-3'>
+                            <div key={category.id} className='flex items-center space-x-3'>
                                 <CheckBox checked={category.id === 3}></CheckBox>
                                 <li
-                                    key={category.id}
                                     className='text-lg'
                                 >
                                     {category.name}
@@ -66,10 +65,9 @@ const FilterCategory = () => {
                             <>
                                 {
                                     artists.slice(0, 4).map((category) => (
-                                        <div className='flex items-center space-x-3'>
+                                        <div key={category.id} className='flex items-center space-x-3'>
                                             <CheckBox checked={category.id === 2}></CheckBox>
                                             <li
-                                                key={category.id}
                                                 className='text-lg'
                                             >
                                                 {category.name}
@@ -81,12 +79,9 @@ const FilterCategory = () => {
                             </>
                             :
                             artists.map((category) => (
-                                <div className='flex items-center space-x-3'>
+                                <div key={category.id} className='flex items-center space-x-3'>
                                     <CheckBox checked={category.id === 2}></CheckBox>
-                                    <li
-                                        key={category.id}
-                                        className='text-lg'
-                                    >
+                                    <li className='text-lg'>
                                         {category.name}
                                     </li>
                                 </div>
